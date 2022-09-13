@@ -1,8 +1,11 @@
 {
   "name": "close-search-tabs",
   "displayName": "Close Search Tabs",
-  "description": "",
+  "description": "Closes all editor search tabs",
   "version": "0.0.1",
+  "author": "Gabor Babicz <gabor@gaborbabicz.com>",
+  "license": "MIT",
+  "repository": "https://github.com/zeppelin/vscode-close-search-tabs",
   "engines": {
     "vscode": "^1.71.0"
   },
