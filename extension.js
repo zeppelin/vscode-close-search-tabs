@@ -8,8 +8,10 @@ function activate(context) {
     'close-search-tabs.main',
     function () {
       let { tabGroups } = vscode.window;
-      let tabs = tabGroups.activeTabGroup.tabs.filter((tab) =>
-        tab.label.startsWith('Search')
+      let tabs = tabGroups.activeTabGroup.tabs.filter(
+        // Search tabs are restored with the title "Search" when vscode reopens. They'll get back
+        // their original title after focused.
+        (tab) => tab.label.startsWith('Search: ') || tab.label === 'Search'
       );
 
       for (let tab of tabs) {
