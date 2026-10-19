@@ -3,9 +3,12 @@
   "displayName": "Close Search Tabs",
   "description": "Closes all editor search tabs",
   "version": "0.0.1",
+  "publisher": "zeppelin",
+  "private": true,
   "author": "Gabor Babicz <gabor@gaborbabicz.com>",
   "license": "MIT",
   "repository": "https://github.com/zeppelin/vscode-close-search-tabs",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -28,8 +31,8 @@
     "lint": "eslint .",
     "pretest": "pnpm run lint",
     "test": "node ./test/runTest.js",
-    "package": "pnpm vsce package --no-dependencies",
-    "publish": "pnpm vsce publish --no-dependencies"
+    "vsce:package": "vsce package --no-dependencies",
+    "vsce:publish": "vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
@@ -37,6 +40,7 @@
     "@types/node": "16.x",
     "@types/vscode": "^1.71.0",
     "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.0.0",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-ember": "^11.0.6",
